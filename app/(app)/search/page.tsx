@@ -22,10 +22,10 @@ interface Subreddit {
 async function SearchPage({
   searchParams,
 }: {
-  searchParams: Promise<{ query: string }>;
+  searchParams: { query: string };
 }) {
-  const { query } = await searchParams;
-  const subreddits = await searchSubreddits(query);
+  const query = searchParams.query;
+  const subreddits: Subreddit[] = await searchSubreddits(query);
 
   return (
     <>
@@ -49,7 +49,7 @@ async function SearchPage({
       <section className="my-8">
         <div className="mx-auto max-w-7xl px-4">
           <ul className="flex flex-col gap-4">
-            {subreddits.map((subreddit) => (
+            {subreddits.map((subreddit: Subreddit) => (
               <li
                 key={subreddit._id}
                 className="border border-border rounded-lg overflow-hidden"
