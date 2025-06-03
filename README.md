@@ -82,8 +82,6 @@ SANITY_API_TOKEN=your_sanity_token
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
 CLERK_SECRET_KEY=your_clerk_secret_key
 
-# OpenAI (optional)
-OPENAI_API_KEY=your_openai_api_key
 ```
 
 ---
